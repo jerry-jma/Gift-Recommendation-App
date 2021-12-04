@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import VacationIdeas from './VacationIdeas.jsx'
+import VacationList from './VacationList.jsx'
+import PresentList from './PresentList.jsx'
 import { MasterContainer, Btn, Header } from './styles/app.style';
 
 
 const App = () => {
   const [test, setTest] = useState(5);
-  const [vacationInfo, setVacationInfo] = useState(vacation);
+  const [vacationIdeas, setVacationIdeas] = useState(vacation);
 
   return (
     <MasterContainer>
-        {`Init Setup ${test}, ${vacation[0].asker_name}, ${vacation[0].discussion[0].discussion_body}`}
-        <h1>HAPPY WIFE HAPPY LIFE, {`${vacation[0].image}`}</h1>
-        <a href="https://www.instagram.com/p/CXBz68moKyl/">Read More</a>
-        <img src={vacation[2].image} width="320" height="320"/>
-        <img src="images/Bora Bora Resort.jpeg" width="320" height="320"/>
-        <VacationIdeas />
+        <h1>HAPPY WIFE ? HAPPY LIFE : Vacation Presents Romantic Meals</h1>
+        <VacationList vacationIdeas={vacationIdeas} />
+        {/* <PresentList /> */}
     </MasterContainer>
   )
 };
@@ -97,3 +95,9 @@ const vacation = [
     ]
   }
 ]
+
+
+        {/* {`Init Setup ${test}, ${vacation[0].asker_name}, ${vacation[0].discussion[0].discussion_body}`} */}
+        {/* <a href="https://www.instagram.com/p/CXBz68moKyl/">Read More</a>
+        <img src={vacation[2].image} width="320" height="320"/>
+      <img src="images/Bora Bora Resort.jpeg" width="320" height="320"/> */}

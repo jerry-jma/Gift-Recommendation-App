@@ -4,6 +4,8 @@ export const MasterContainer = styled.div`
   border: 5px solid #FFFF00;
   text-align: center;
   // background-color: yellow;
+  margin-left: 10%;
+  margin-right: 10%
 `;
 
 export const Btn = styled.div`
