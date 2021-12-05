@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AddDestination from './AddDestination.jsx';
 import VacationDiscussions from './VacationDiscussions.jsx';
 
-import { Img, VacationContainer, ActionsContainer, VacationDetails, Location, Actions, Discussions, Btn, Likes, Dislikes, ReadMore, PlanNow, ProfilePic, DiscussionBody, UserContainer, userName } from './styles/Vacation.style'
+import { Img, SectionContainer, ActionsContainer, Title, Actions, Discussions, Btn, Likes, Dislikes, ReadMore, ActNow, ProfilePic, DiscussionBody, UserContainer, userName } from './styles/Shared.style'
 
 const VacationSpot = ({vacationIdea}) => {
   const [isLike, setIsLike] = useState(false);
@@ -22,11 +22,11 @@ const VacationSpot = ({vacationIdea}) => {
   }
 
   return (
-    <VacationContainer >
+    <SectionContainer >
       <Img src={vacationIdea.image} />
-        <Location>
-           <div>{vacationIdea.vacation_location}</div>
-        </Location>
+        <Title>
+           <div>{vacationIdea.title}</div>
+        </Title>
         <Actions>
           <ActionsContainer>
             <Likes onClick={updateLikes}>LIKE BY HER |  {vacationIdea.likes}</Likes>
@@ -34,9 +34,9 @@ const VacationSpot = ({vacationIdea}) => {
             <ReadMore>
                 <a href={vacationIdea.moreDetails}>Read More</a>
             </ReadMore>
-            <PlanNow>
-              <a href="https://www.instagram.com/p/CXBz68moKyl/">Plan Your Trip NOW</a>
-            </PlanNow>
+            <ActNow>
+              <a href="https://www.tripadvisor.com/">Plan Your Trip NOW</a>
+            </ActNow>
           </ActionsContainer>
         </Actions>
         <Discussions>
@@ -46,7 +46,7 @@ const VacationSpot = ({vacationIdea}) => {
           )}
           <AddDestination />
         </Discussions>
-    </VacationContainer>
+    </SectionContainer>
   )
 };
 

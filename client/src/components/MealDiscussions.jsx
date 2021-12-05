@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProfilePic, DiscussionBody, UserContainer } from './styles/Shared.style';
 
-const PresentsDiscussions = ({discussion}) => {
+const MealDiscussions = ({discussion}) => {
   return (
     <UserContainer>
       <ProfilePic src={discussion.userProfile} />
@@ -14,4 +14,4 @@ const PresentsDiscussions = ({discussion}) => {
   )
 }
 
-export default PresentsDiscussions;
+export default MealDiscussions;

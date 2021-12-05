@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProfilePic, DiscussionBody, UserContainer } from './styles/Vacation.style';
+import { ProfilePic, DiscussionBody, UserContainer } from './styles/Shared.style';
 
 const VacationDiscussions = ({discussion}) => {
   return (

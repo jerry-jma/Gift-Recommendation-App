@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const VacationContainer = styled.div`
+export const SectionContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(8, 12.5%);
@@ -18,7 +18,7 @@ export const Img = styled.img`
   border-radius: 5%
 `;
 
-export const Location = styled.div`
+export const Title = styled.div`
   grid-column: 3 / span 3;
   grid-row: 1 / span 1;
   border: black solid 1px;
@@ -64,7 +64,7 @@ export const ReadMore = styled.div`
   grid-column: 3 / span 1;
   border: black solid 1px;
 `;
-export const PlanNow = styled.div`
+export const ActNow = styled.div`
   grid-column: 4 / span 1;
   border: black solid 1px;
 `;
