@@ -3,9 +3,10 @@ import VacationSpot from './VacationSpot.jsx';
 
 const VacationList = ({vacationIdeas}) => (
   <div>
-    {vacationIdeas.map((vacationIdea, vacation_id) => {
+    {console.log(vacationIdeas)}
+    {vacationIdeas.map((vacationIdea) => {
       return(
-        <VacationSpot vacationIdea={vacationIdea} key={vacation_id}/>
+        <VacationSpot vacationIdea={vacationIdea} key={vacationIdea.id} />
       )}
     )}
   </div>

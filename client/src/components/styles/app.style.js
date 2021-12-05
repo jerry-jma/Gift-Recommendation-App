@@ -8,7 +8,7 @@ export const MasterContainer = styled.div`
   margin-right: 10%
 `;
 
-export const Btn = styled.div`
+export const Btn = styled.button`
   display: flex;
 `;
 export const Header = styled.div`
