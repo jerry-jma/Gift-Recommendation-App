@@ -16,17 +16,20 @@ const App = () => {
   const [isPresents, setIsPresents] = useState(false);
   const [isMeal, setIsMeal] = useState(false);
 
-  // useEffect()
-
   const updateVacation = (e) => {
-    setIsVacation(!isVacation)
+    setIsVacation(!isVacation);
+     setIsPresents(false);
+     setIsMeal(false);
   }
   const updatePresents = (e) => {
-    setIsPresents(!isPresents)
+    setIsPresents(!isPresents);
+    setIsVacation(false);
+    setIsMeal(false);
   }
   const updateMeals = (e) => {
     setIsMeal(!isMeal)
-    console.log(isMeal)
+     setIsVacation(false);
+     setIsPresents(false);
   }
 
   return (
@@ -41,8 +44,8 @@ const App = () => {
         <Btn onClick={updateMeals}>
           Romantic Meals
         </Btn>
-        {<VacationList vacationIdeas={vacationIdeas} />}
-        <PresentList presents={presents}/>
+        {isVacation && <VacationList vacationIdeas={vacationIdeas} />}
+        {isPresents && <PresentList presents={presents}/>}
     </MasterContainer>
   )
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import PresentItem from './PresentItem.jsx';
 
-const PresentList = ({vacationIdeas}) => (
+const PresentList = ({presents}) => (
   <div>
-    {vacationIdeas.map((vacationIdea, vacation_id) => {
+    {presents.map((present) => {
       return(
-        <PresentItem vacationIdea={vacationIdea} key={vacation_id}/>
+        <PresentItem present={present} key={present.id}/>
       )}
     )}
   </div>
