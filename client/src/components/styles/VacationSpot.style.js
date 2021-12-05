@@ -27,7 +27,25 @@ export const Actions = styled.div`
   grid-column: 3 / span 3;
   grid-row: 2 / span 1;
   border: black solid 1px;
+`;
+
+export const ActionsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 25%)
   // justify-content: center;
+`;
+
+export const Likes = styled.button`
+  grid-column: 1 / span 1;
+`;
+export const Dislikes = styled.button`
+  grid-column: 2 / span 1;
+`;
+export const ReadMore = styled.div`
+  grid-column: 3 / span 1;
+`;
+export const PlanNow = styled.div`
+  grid-column: 4 / span 1;
 `;
 
 export const Discussions = styled.div`
@@ -36,6 +54,17 @@ export const Discussions = styled.div`
   border: black solid 1px;
   // justify-self: start;
 `;
+
+export const DiscussionsContainer = styled.div`
+  display: grid;
+  grid-template-rows: repeat(5, 20%)
+  // justify-content: center;
+`;
+
+export const Opinion = styled.div`
+
+`;
+
 
 export const Btn = styled.button`
   cursor: pointer;

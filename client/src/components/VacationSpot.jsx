@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDestination from './AddDestination.jsx'
-import { Img, VacationContainer, VacationDetails, Location, Actions, Discussions, Btn } from './styles/VacationSpot.style'
+import { Img, VacationContainer, ActionsContainer, VacationDetails, Location, Actions, Discussions, Btn, Likes, Dislikes, ReadMore, PlanNow } from './styles/VacationSpot.style'
 
 const VacationSpot = ({vacationIdea}) => {
 
@@ -11,16 +11,18 @@ const VacationSpot = ({vacationIdea}) => {
            <div>{vacationIdea.vacation_location}</div>
         </Location>
         <Actions>
-          <Btn>LIKE BY HER</Btn>
-          {vacationIdea.likes}
-          <Btn>DISLIKE BY HER</Btn>
-          {vacationIdea.dislikes}
-          <div>
-              <a href="https://www.instagram.com/p/CXBz68moKyl/">Read More</a>
-          </div>
-          <div>
-             <a href="https://www.instagram.com/p/CXBz68moKyl/">Plan Your Trip NOW</a>
-          </div>
+          <ActionsContainer>
+            <Likes>LIKE BY HER |  {vacationIdea.likes}</Likes>
+            {/* {vacationIdea.likes} */}
+            <Dislikes>DISLIKE BY HER | {vacationIdea.dislikes}</Dislikes>
+            {/* {vacationIdea.dislikes} */}
+            <ReadMore>
+                <a href="https://www.instagram.com/p/CXBz68moKyl/">Read More</a>
+            </ReadMore>
+            <PlanNow>
+              <a href="https://www.instagram.com/p/CXBz68moKyl/">Plan Your Trip NOW</a>
+            </PlanNow>
+          </ActionsContainer>
         </Actions>
         <Discussions>
           <div>
@@ -29,7 +31,7 @@ const VacationSpot = ({vacationIdea}) => {
           <div>
             {vacationIdea.discussion[0].discussion_replies[0].reply_body}
           </div>
-          <AddDestination />
+          {/* <AddDestination /> */}
         </Discussions>
     </VacationContainer>
   )
