@@ -112,3 +112,9 @@ export const MasterContainer = styled.div`
   export const Header = styled.div`
     padding: 10px;
   `;
+
+  export const HomeScreen = styled.img`
+    height: 87%;
+    width: 97%;
+    margin-left: 2%;
+  `;
