@@ -14,10 +14,15 @@ const App = () => {
   const [vacationIdeas, setVacationIdeas] = useState(vacation);
   const [presents, setPresents] = useState(presentsData);
   const [meals, setMeals] = useState(mealsData);
-
   const [isVacation, setIsVacation] = useState(false);
   const [isPresents, setIsPresents] = useState(false);
   const [isMeal, setIsMeal] = useState(false);
+
+  const retrieveData = async () => {
+    const response = await fetch(`/happywife`);
+    const data = await response.json();
+    return data;
+  };
 
   const updateVacation = (e) => {
     setIsVacation(!isVacation);
@@ -120,7 +125,7 @@ const data = [
     dislikes: 5,
     image: "images/The magical village of Hallstatt in Austria ⛰.jpeg",
     moreDetails: "https://www.bbc.com/travel/article/20200603-hallstatt-austrias-tiny-village-with-10000-day-trippers",
-    sellerContact: "",
+    reference: "",
     discussions: [
       {
         discussion_id: 1,
