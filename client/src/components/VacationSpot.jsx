@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import AddDestination from './AddDestination.jsx';
-import VacationDiscussions from './VacationDiscussions.jsx';
+import AddOpinion from './AddOpinion.jsx';
+import AllDiscussions from './AllDiscussions.jsx';
 
-import { Img, SectionContainer, ActionsContainer, Title, Actions, Discussions, Btn, Likes, Dislikes, ReadMore, ActNow, ProfilePic, DiscussionBody, UserContainer, userName } from './styles/Shared.style'
+import { Img, SectionContainer, ActionsContainer, Title, Actions, Discussions, Btn, Likes, Dislikes, ReadMore, ActNow, ProfilePic, DiscussionBody, UserContainer, userName, Anker } from './styles/Shared.style'
 
 const VacationSpot = ({vacationIdea}) => {
   const [isLike, setIsLike] = useState(false);
@@ -32,19 +32,19 @@ const VacationSpot = ({vacationIdea}) => {
             <Likes onClick={updateLikes}>LIKE BY HER |  {vacationIdea.likes}</Likes>
             <Dislikes onClick={updateDislikes}>DISLIKE BY HER | {vacationIdea.dislikes}</Dislikes>
             <ReadMore>
-                <a href={vacationIdea.moreDetails}>Read More</a>
+                <Anker href={vacationIdea.moreDetails}>Read More</Anker>
             </ReadMore>
             <ActNow>
-              <a href="https://www.tripadvisor.com/">Plan Your Trip NOW</a>
+              <Anker href="https://www.tripadvisor.com/">Plan Your Trip NOW</Anker>
             </ActNow>
           </ActionsContainer>
         </Actions>
         <Discussions>
           {vacationIdea.discussions.map((discussion) => (
-            <VacationDiscussions discussion={discussion} key={discussion.discussion_id}/>
+            <AllDiscussions discussion={discussion} key={discussion.discussion_id}/>
             )
           )}
-          <AddDestination />
+          <AddOpinion />
         </Discussions>
     </SectionContainer>
   )

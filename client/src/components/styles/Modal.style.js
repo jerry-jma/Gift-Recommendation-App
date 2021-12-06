@@ -10,8 +10,8 @@ export const ModalShadow = styled.div`
   z-index: 4;
 `;
 export const Modal = styled.div`
-  min-width: 349px;
-  max-width: 399px;
+  min-width: 533px;
+  max-width: 555px;
   background-color: white;
   position: fixed;
   top: 75px;

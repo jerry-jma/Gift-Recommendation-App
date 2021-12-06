@@ -4,7 +4,7 @@ import {
   SubmitInput, SubmitContainer, Title, SubTitle, TitleContainer, Exit,
 } from '../styles/Modal.style';
 
-const VacationForm = ({
+const ModalForm = ({
   setOpen,
   newQuestion,
   setNewQuestion,
@@ -19,7 +19,7 @@ const VacationForm = ({
     <form onSubmit={handleSumbit}>
       <TitleContainer>
         <Title>
-          Ask Your Question
+          Your Opinion Matters
         </Title>
         <Exit onClick={() => setOpen(false)}>
           X
@@ -30,7 +30,7 @@ const VacationForm = ({
       </TitleContainer>
       <Container1>
         <LabelArea htmlFor="question">
-          Your Question
+          What's your thoughts?
         </LabelArea>
         <LargeText
           id="question"
@@ -49,7 +49,6 @@ const VacationForm = ({
           type="text"
           required
           maxlength="60"
-          placeholder="Example: jackson11!"
           onChange={(e) => setNewQuestion({ ...newQuestion, name: e.target.value })}
         />
         <Notes>
@@ -57,15 +56,14 @@ const VacationForm = ({
         </Notes>
       </Container1>
       <Container1>
-        <LabelArea htmlFor="email">
-          Your Email
+        <LabelArea htmlFor="link">
+          Where to read more about it, please provide link?
         </LabelArea>
         <InputArea
-          id="email"
-          type="email"
+          id="link"
+          type="text"
           required
-          maxlength="60"
-          placeholder="Why did you like the product or not?"
+          maxlength="100"
           onChange={(e) => setNewQuestion({ ...newQuestion, email: e.target.value })}
         />
         <Notes>
@@ -83,4 +81,4 @@ const VacationForm = ({
 };
 
 
-export default VacationForm;
+export default ModalForm;

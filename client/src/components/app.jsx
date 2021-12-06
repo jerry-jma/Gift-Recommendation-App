@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VacationList from './VacationList.jsx';
 import PresentList from './PresentList.jsx';
 import MealList from './MealList.jsx';
-import { Title, MasterContainer, IdeasContainer, IdeasSelector, Btn, Header } from './styles/app.style';
+import { Title, MasterContainer, IdeasContainer, IdeasSelector, Btn1, Btn2, Btn3, Header } from './styles/app.style';
 
 
 const App = () => {
@@ -18,11 +18,24 @@ const App = () => {
   const [isPresents, setIsPresents] = useState(false);
   const [isMeal, setIsMeal] = useState(false);
 
-  const retrieveData = async () => {
-    const response = await fetch(`/happywife`);
-    const data = await response.json();
-    return data;
-  };
+  const retrieveData = () => {
+    fetch('/happywife')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+  }
+
+  const postToAPI = (data) => {
+    fetch('/happywife', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(() => this.retrieveData())
+  }
 
   const updateVacation = (e) => {
     setIsVacation(!isVacation);
@@ -42,18 +55,18 @@ const App = () => {
 
   return (
     <div>
-      <Title>HAPPY WIFE ? HAPPY LIFE : Vacation Presents Romantic Meals</Title>
+      <Title>HAPPY WIFE HAPPY LIFE</Title>
       <MasterContainer>
           <IdeasSelector>
-            <Btn onClick={updateVacation}>
+            <Btn1 onClick={updateVacation}>
               Vacation Ideas
-            </Btn>
-            <Btn onClick={updatePresents}>
+            </Btn1>
+            <Btn2 onClick={updatePresents}>
               Presents
-            </Btn>
-            <Btn onClick={updateMeals}>
+            </Btn2>
+            <Btn3 onClick={updateMeals}>
               Romantic Meals
-            </Btn>
+            </Btn3>
           </IdeasSelector>
           <IdeasContainer>
             {isVacation && <VacationList vacationIdeas={vacationIdeas} />}
@@ -61,7 +74,6 @@ const App = () => {
             {isMeal && <MealList meals={meals}/>}
           </IdeasContainer>
       </MasterContainer>
-
     </div>
   )
 };

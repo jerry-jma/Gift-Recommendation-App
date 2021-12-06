@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import VacationForm from './VacationForm.jsx';
+import ModalForm from './ModalForm.jsx';
 import { ModalShadow, Modal } from '../styles/Modal.style.js';
 
-const VacationModal = ({setOpen}) => {
+const ModalView = ({setOpen}) => {
   const [newQuestion, setNewQuestion] = useState({
     question_body: '',
     asker_name: '',
@@ -16,7 +16,7 @@ const VacationModal = ({setOpen}) => {
       <>
       <ModalShadow />
       <Modal>
-        <VacationForm
+        <ModalForm
           setNewQuestion={setNewQuestion}
           newQuestion={newQuestion}
           setOpen={setOpen}
@@ -28,4 +28,4 @@ const VacationModal = ({setOpen}) => {
   )
 };
 
-export default VacationModal;
+export default ModalView;
