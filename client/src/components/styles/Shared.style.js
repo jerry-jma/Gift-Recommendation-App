@@ -86,7 +86,6 @@ export const ReadMore = styled.div`
   font-weight: 500;
   padding: 3px;
   color: #48E09C;
-  border: 1px solid black;
   border-radius:20px;
   margin: 5px;
   cursor: pointer;
@@ -106,7 +105,6 @@ export const ActNow = styled.div`
   font-weight: 500;
   padding: 3px;
   color: #48E09C;
-  border: 1px solid black;
   border-radius:20px;
   margin: 5px;
   cursor: pointer;

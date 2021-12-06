@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VacationList from './VacationList.jsx';
 import PresentList from './PresentList.jsx';
 import MealList from './MealList.jsx';
-import { Title, MasterContainer, IdeasContainer, IdeasSelector, Btn1, Btn2, Btn3, Header } from './styles/app.style';
+import { Title, MasterContainer, IdeasContainer, IdeasSelector, Btn1, Btn2, Btn3, Header, Login, SignIn, SignUp } from './styles/app.style';
 
 
 const App = () => {
@@ -56,6 +56,10 @@ const App = () => {
   return (
     <div>
       <Title>HAPPY WIFE HAPPY LIFE</Title>
+      <Login>
+        <SignIn>Sign in</SignIn>
+        <SignUp>Sign up</SignUp>
+      </Login>
       <MasterContainer>
           <IdeasSelector>
             <Btn1 onClick={updateVacation}>

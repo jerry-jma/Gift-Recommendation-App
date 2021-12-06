@@ -88,6 +88,26 @@ export const MasterContainer = styled.div`
        text-shadow: none;
     }
   `;
+  export const Login = styled.div`
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+  `;
+  export const SignIn = styled.button`
+    grid-column: 9 / span 1;
+    font-size: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+  `;
+  export const SignUp = styled.button`
+    grid-column: 10 / span 1;
+    font-size: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+  `;
 
   export const Header = styled.div`
     padding: 10px;
