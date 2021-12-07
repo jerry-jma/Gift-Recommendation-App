@@ -108,6 +108,16 @@ export const MasterContainer = styled.div`
     border-radius: 20px;
     cursor: pointer;
   `;
+  export const AddNewIdeas = styled.button`
+    grid-column: 1 / span 1;
+    justify-self: end;
+    align-self: center;
+    font-size: 17px;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+  `;
 
   export const Header = styled.div`
     padding: 10px;

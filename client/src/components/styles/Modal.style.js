@@ -94,8 +94,10 @@ export const PopupImg = styled.img`
 export const TitleContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 12.5%);
-  background-color: #016ABC;
-  color: #fff;
+  // background-color: #016ABC;
+  background-color: #48E09C;
+  // color: #fff;
+  color: black;
 `;
 
 export const Title = styled.h3`
@@ -114,7 +116,7 @@ export const Exit = styled.button`
   border-radius: 40%;
   padding: 11px 0;
   align-self: center;
-  background-color: white;
+  background-color: #48E09C;
   color: red;
   font-weigth: bold;
   &:hover {

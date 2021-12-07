@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VacationList from './VacationList.jsx';
 import PresentList from './PresentList.jsx';
 import MealList from './MealList.jsx';
-import { Title, MasterContainer, IdeasContainer, IdeasSelector, Btn1, Btn2, Btn3, Header, Login, SignIn, SignUp, HomeScreen } from './styles/app.style';
+import { Title, MasterContainer, IdeasContainer, IdeasSelector, Btn1, Btn2, Btn3, Header, Login, SignIn, SignUp, HomeScreen, AddNewIdeas } from './styles/app.style';
 
 
 const App = () => {
@@ -57,6 +57,7 @@ const App = () => {
     <div>
       <Title>HAPPY WIFE HAPPY LIFE</Title>
       <Login>
+        <AddNewIdeas>New Ideas</AddNewIdeas>
         <SignIn>Sign in</SignIn>
         <SignUp>Sign up</SignUp>
       </Login>
