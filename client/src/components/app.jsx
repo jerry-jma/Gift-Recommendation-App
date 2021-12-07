@@ -212,7 +212,7 @@ const data = [
     title: "Birthday Balloons Gift",
     likes: 11,
     dislikes: 5,
-    image: "images/presents/g5.jpg",
+    image: "images/presents/g2.jpeg",
     moreDetails: "https://www.instagram.com/p/CWRphPOp6ot/",
     reference: "https://www.instagram.com/azucardecoracoes/",
     discussions: [
