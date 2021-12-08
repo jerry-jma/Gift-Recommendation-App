@@ -65,7 +65,7 @@ export const InputArea = styled.input`
 
 export const LargeText = styled.textarea`
   width: 100%;
-  height: 99px;
+  height: 77px;
 `;
 
 export const Notes = styled.div`

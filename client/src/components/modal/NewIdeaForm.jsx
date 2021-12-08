@@ -12,31 +12,39 @@ const ModalForm = ({
 }) => {
   const handleSumbit = (e) => {
     e.preventDefault();
-    setOpen(false);
-    console.log('hello')
     // handleAddQuestion(newQuestion);
+    setOpen(false);
   };
   return (
     <form onSubmit={handleSumbit}>
       <TitleContainer>
         <Title>
-          Your Opinion Matters
+          Share Your Idea
         </Title>
         <Exit onClick={() => setOpen(false)}>
           X
         </Exit>
       </TitleContainer>
       <Container1>
-        <LabelArea htmlFor="question">
-          What's your thoughts?
+        <LabelArea htmlFor="tile">
+          Add a Title
         </LabelArea>
-        <LargeText
-          id="question"
+        <InputArea
+          id="tile"
           type="text"
-          maxlength="100"
           required
-          onChange={(e) => setNewQuestion({ ...newQuestion, body: e.target.value })}
+          maxlength="60"
+          onChange={(e) => setNewQuestion({ ...newQuestion, name: e.target.value })}
         />
+      </Container1>
+      <Container1>
+        <label for="newIdea">Choose an idea tag:</label>
+        <select name="idea" id="newIdea">
+            <option value="">--Please choose an option--</option>
+            <option value="Vacation Idea">Vacation Idea</option>
+            <option value="Presents idea">Presents idea</option>
+            <option value="Romantic Meal Idea">Romantic Meal Idea</option>
+        </select>
       </Container1>
       <Container1>
         <LabelArea htmlFor="nickname">
@@ -54,6 +62,18 @@ const ModalForm = ({
         </Notes>
       </Container1>
       <Container1>
+        <LabelArea htmlFor="question">
+          What's your idea for your special day?
+        </LabelArea>
+        <LargeText
+          id="question"
+          type="text"
+          maxlength="1000"
+          required
+          onChange={(e) => setNewQuestion({ ...newQuestion, body: e.target.value })}
+        />
+      </Container1>
+      <Container1>
         <LabelArea htmlFor="link">
           Where to read more about it, please provide link?
         </LabelArea>
@@ -61,17 +81,26 @@ const ModalForm = ({
           id="link"
           type="text"
           required
-          maxlength="100"
+          maxlength="500"
           onChange={(e) => setNewQuestion({ ...newQuestion, email: e.target.value })}
         />
-        <Notes>
-          For authentication reasons, you will not be emailed
-        </Notes>
+      </Container1>
+      <Container1>
+        <LabelArea htmlFor="link">
+        Please upload a revelant image
+        </LabelArea>
+        <InputArea
+          id="link"
+          type="file"
+          accept="image/*"
+          required
+          onChange={(e) => setNewQuestion({ ...newQuestion, email: e.target.value })}
+        />
       </Container1>
       <SubmitContainer>
         <SubmitInput
           type="submit"
-          value="Submit Question"
+          value="Submit"
         />
       </SubmitContainer>
     </form>

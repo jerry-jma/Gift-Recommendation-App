@@ -5,7 +5,9 @@ export const Title = styled.header`
   min-height: 50px;
   font-size: 48px;
   font-family: 'Luckiest Guy', cursive;
-  color: #48E09C;
+  padding-top: 1%;
+  background-color: #48E09C;
+  color: black;
 `;
 export const MasterContainer = styled.div`
   display: grid;
@@ -91,6 +93,7 @@ export const MasterContainer = styled.div`
   export const Login = styled.div`
     display: grid;
     grid-template-columns: repeat(10, 10%);
+    background-color: #48E09C;
   `;
   export const SignIn = styled.button`
     grid-column: 9 / span 1;
@@ -108,13 +111,13 @@ export const MasterContainer = styled.div`
     border-radius: 20px;
     cursor: pointer;
   `;
-  export const AddNewIdeas = styled.button`
+  export const AddIdeaButton = styled.button`
     grid-column: 1 / span 1;
     justify-self: end;
     align-self: center;
-    font-size: 17px;
+    font-size: 11px;
     font-family: 'Luckiest Guy', cursive;
-    margin: 7px;
+    margin-bottom: 3%;
     border-radius: 20px;
     cursor: pointer;
   `;
@@ -124,7 +127,8 @@ export const MasterContainer = styled.div`
   `;
 
   export const HomeScreen = styled.img`
-    height: 87%;
+    height: 81%;
     width: 97%;
     margin-left: 2%;
+    margin-top: 1%;
   `;

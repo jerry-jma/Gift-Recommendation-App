@@ -29,7 +29,7 @@ const VacationSpot = ({vacationIdea}) => {
         </Title>
         <Actions>
           <ActionsContainer>
-            <Likes onClick={updateLikes}>LIKE BY HER |  {vacationIdea.likes}</Likes>
+            <Likes onClick={updateLikes}>{`LIKE BY HER | ${vacationIdea.likes}`}</Likes>
             <Dislikes onClick={updateDislikes}>DISLIKE BY HER | {vacationIdea.dislikes}</Dislikes>
             <ReadMore>
                 <Anker href={vacationIdea.moreDetails}>Read More</Anker>
