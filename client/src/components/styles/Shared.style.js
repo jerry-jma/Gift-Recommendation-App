@@ -136,7 +136,8 @@ export const DiscussionsContainer = styled.div`
 
 export const UserContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(8, 12.5%);
+  // grid-template-columns: repeat(8, 12.5%);
+  grid-template-columns: repeat(10, 10%);
   justify-contents: center;
   align-items; center;
 `;
@@ -146,9 +147,11 @@ export const ProfilePic = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  padding-bottom: 2%
 `;
 export const DiscussionBody = styled.div`
-  grid-column: 2 / span 7;
+  grid-column: 2 / span 9;
+  align-self: center;
 `;
 
 export const Btn = styled.button`
