@@ -40,7 +40,7 @@ const ModalForm = ({
       <Container1>
         <label for="newIdea">Choose an idea tag:</label>
         <select name="idea" id="newIdea">
-            <option value="">--Please choose an option--</option>
+            <option value="">--Please choose a category--</option>
             <option value="Vacation Idea">Vacation Idea</option>
             <option value="Presents idea">Presents idea</option>
             <option value="Romantic Meal Idea">Romantic Meal Idea</option>
