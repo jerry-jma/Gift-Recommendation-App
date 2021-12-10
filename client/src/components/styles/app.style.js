@@ -8,6 +8,7 @@ export const Title = styled.header`
   padding-top: 1%;
   background-color: #48E09C;
   color: black;
+  // opacity: 0.6;
 `;
 export const MasterContainer = styled.div`
   display: grid;
