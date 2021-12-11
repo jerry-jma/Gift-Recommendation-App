@@ -1,4 +1,5 @@
 const Option = require('../../db/models/Option');
+const db = require('../../db/models/index');
 
 const retrieveData = (req, res) => {
   Option.find({})
